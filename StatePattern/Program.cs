@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StatePattern.Tools;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,10 @@ namespace StatePattern
             canvas.MouseUp();
 
             canvas.CurrentTool = new SelectionTool();
+            canvas.MouseDown();
+            canvas.MouseUp();
+
+            canvas.CurrentTool = new EraserTool();
             canvas.MouseDown();
             canvas.MouseUp();
 
